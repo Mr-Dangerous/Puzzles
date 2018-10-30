@@ -1,14 +1,27 @@
 package EightQueens
 
-class chessSpace (x: Int, y: Int)
+class ChessboardSquare (val xCoordinate: Int, val yCoordinate: Int)
 
-
-fun eliminateVerticalSpaces(x: Int, y: Int){
-
+fun buildChessBoard (): List<ChessboardSquare> {
+    val chessboard = mutableListOf<ChessboardSquare>()
+    for (i in 1..8){
+        for (j in 1..8){
+            val chessboardSquare = ChessboardSquare (i, j)
+            chessboard.add(chessboardSquare)
+        }
+    }
+    return chessboard
 }
-fun eliminateHorizantalSpaces(x: Int, y: Int){
-
+fun printChessBoard (chessBoard: List<ChessboardSquare>){
+    for ((index) in chessBoard.withIndex()){
+        val chessBoardSquare = chessBoard[index]
+        val x = chessBoardSquare.xCoordinate
+        val y = chessBoardSquare.yCoordinate
+        println("[$x, $y]")
+    }
 }
-fun eliminateDiagonalSpaces(x: Int, y: Int){
 
+fun main(args: Array<String>) {
+    var chessBoard = buildChessBoard()
+    printChessBoard(chessBoard)
 }
