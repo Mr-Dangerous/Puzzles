@@ -1,5 +1,8 @@
 package EightQueens
 
+//Given a chessboard with 8 queens, make a function that will check to see if any of the
+//queens can capture one another.  Return true if they can capture eachother
+//false if they cannot
 class ChessboardSquare (val xCoordinate: Int, val yCoordinate: Int)
 
 fun buildChessBoard (): List<ChessboardSquare> {
