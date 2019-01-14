@@ -66,7 +66,7 @@ fun resetPieces(){
 
 }
 
-
+//
 fun drawBoard(chessboard: MutableList<BoardSquare>){
     drawNotationLine()
     drawHorizontalLine()
